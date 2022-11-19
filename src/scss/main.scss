@@ -73,10 +73,20 @@ body {
   background-size: contain;
 }
 
+.prevent-load-transition {
+  transition: none !important;
+}
+
 #effects-toggle {
   background-image: url('../assets/icons/icons-light.svg');
-  cursor: pointer;
+  cursor: help;
   opacity: 0.3;
+  transition: 0.7s opacity;
+
+  &.effects-toggle_active {
+    transition: 0.7s opacity;
+    opacity: 0.9;
+  }
 }
 
 .button-primary {

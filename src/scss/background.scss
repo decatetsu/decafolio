@@ -3,19 +3,17 @@ a, .menu__item, #effects-toggle {
 }
 
 #background-effects {
-  transition: 3s all;
-  opacity: 0.85;
+  opacity: 0;
+  transition: 2s opacity;
 
-  &.background-effects_disabled {
-    visibility: hidden;
-    opacity: 0;
-    transition: 3s all;
+  &.background-effects_active {
+    transition: 2s opacity;
+    opacity: 0.85;
   }
 
   > div {
     position: absolute;
     border-radius: 50%;
-
     z-index: 1;
     filter: blur(21rem);
   }
