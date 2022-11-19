@@ -1,6 +1,8 @@
+// Prevent clickable elements from being covered by backgrounds
 a, .menu__item, #effects-toggle {
   z-index: 2;
 }
+
 
 #background-effects {
   opacity: 0;
@@ -18,6 +20,7 @@ a, .menu__item, #effects-toggle {
     filter: blur(21rem);
   }
 }
+
 
 .background-container-1 {
   width: 27.6rem;
@@ -72,6 +75,7 @@ a, .menu__item, #effects-toggle {
 
   background: linear-gradient(211.34deg, #3D73FF 16.67%, #2E56BD 98.59%)
 }
+
 
 @media (max-width: 576px) {
   .background-container-3 {

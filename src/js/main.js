@@ -1,9 +1,12 @@
+// Prevent transition loading from page load
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.prevent-load-transition').classList.remove('prevent-load-transition');
 });
 
+// Declaring necessary DOM objects
 const effectBtn = document.getElementById('effects-toggle');
 const bgHtmlWrapper = document.getElementById('background-effects');
+
 effectBtn.addEventListener('click', switchBackground);
 
 if (window.localStorage.getItem('bgEffects') === null) {

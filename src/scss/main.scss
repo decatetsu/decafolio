@@ -1,19 +1,10 @@
-$straight-white: rgb(255, 255, 255);
-$text-muted: rgba(255, 255, 255, 0.85);
-$text-semi-muted: rgba(255, 255, 255, 0.65);
-$text-faint: rgba(255, 255, 255, 0.5);
-$bg-dark: #171717;
-$bg-darken: #090909;
-$bg-border-color: #252525;
-
-$btn-border-color: #9CE1FF;
-
+@import "variables";
 
 body {
-  color: $text-muted;
+  color: $text-normal;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  background-color: $bg-dark;
+  background-color: $background-primary;
   user-select: none;
   overflow-x: hidden;
 }
@@ -25,7 +16,7 @@ body {
     font-weight: 700;
     font-size: 1.87rem;
     line-height: 2.15rem;
-    color: $straight-white;
+    color: $text-white;
   }
 
   &-container {
@@ -35,6 +26,13 @@ body {
   }
 }
 
+.even-section {
+  background: $background-secondary;
+  border-top: 1px solid $background-modifier;
+  border-bottom: 1px solid $background-modifier;
+}
+
+// Declare icons' background
 .icon-gmail {
   background-image: url('../assets/icons/icon-gmail.svg');
 }
@@ -47,20 +45,14 @@ body {
   background-image: url('../assets/icons/icon-github.svg');
 }
 
-.even-section {
-  background: $bg-darken;
-  border-top: 1px solid $bg-border-color;
-  border-bottom: 1px solid $bg-border-color;
-}
-
 .highlight {
-  background: #5EBAE1;
+  background: $text-outer-highlight;
   border-radius: 5px;
-  color: rgba(0, 0, 0, 0.8);
+  color: $background-secondary;
 }
 
 .inner-highlight {
-  background: linear-gradient(90.71deg, rgba(62, 197, 255, 0.87) -3.75%, rgba(191, 236, 255, 0.87) 88.49%);
+  background: $text-inner-highlight;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -92,7 +84,7 @@ body {
 .button-primary {
   display: inline-block;
   border-radius: 6.25rem;
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  border: 2px solid $button-border-color-muted;
   font-size: 0.95rem;
   font-weight: bold;
   text-align: center;
@@ -103,9 +95,10 @@ body {
 
   &:hover {
     transition: 0.4s border-color;
-    border-color: $btn-border-color;
+    border-color: $button-border-color;
   }
 }
+
 
 .header {
   display: flex;
@@ -120,13 +113,13 @@ body {
 
     &__title {
       font-weight: bold;
-      color: $text-muted;
+      color: $text-normal;
       font-size: 1.375rem;
       transition: 0.3s color;
 
       &:hover {
         transition: 0.3s color;
-        color: $straight-white;
+        color: $text-white;
       }
     }
   }
@@ -154,11 +147,11 @@ body {
         margin-top: 2px;
         height: 2px;
         width: 0;
-        background-color: $text-muted;
+        background-color: $text-normal;
       }
 
       &:hover {
-        color: $text-muted;
+        color: $text-normal;
 
         &::after {
           width: 7px;
@@ -182,7 +175,7 @@ body {
     font-weight: 400;
 
     > p {
-      color: $text-muted;
+      color: $text-normal;
       margin-top: 1.87rem;
     }
   }
@@ -202,10 +195,10 @@ body {
 }
 
 .grid-element {
-  background: #191819;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  background: $grid-background;
+  box-shadow: 0 0 30px $grid-shadow-color;
   border-radius: 10px;
-  border: 1px solid $bg-border-color;
+  border: 1px solid $background-modifier;
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -242,7 +235,7 @@ body {
   &__description {
     margin: 1.25rem 0;
     font-size: 1.05rem;
-    color: $text-semi-muted;
+    color: $text-muted;
     line-height: 1.25rem;
   }
 
@@ -263,7 +256,7 @@ body {
     margin: 0;
     font-size: 0.85rem;
     font-weight: 700;
-    background: linear-gradient(86.97deg, rgba(62, 197, 255, 0.87) 3.93%, rgba(172, 230, 255, 0.87) 138.84%);
+    background: $text-tag;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -278,7 +271,7 @@ body {
   color: $text-faint;
 
   strong {
-    color: $text-muted;
+    color: $text-normal;
   }
 
   > p {
