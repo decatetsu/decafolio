@@ -2,7 +2,10 @@ $straight-white: rgb(255, 255, 255);
 $text-muted: rgba(255, 255, 255, 0.85);
 $text-semi-muted: rgba(255, 255, 255, 0.65);
 $text-faint: rgba(255, 255, 255, 0.5);
-$bg-black: #171717;
+$bg-dark: #171717;
+$bg-darken: #090909;
+$bg-border-color: #252525;
+
 $btn-border-color: #9CE1FF;
 
 
@@ -10,7 +13,7 @@ body {
   color: $text-muted;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  background-color: $bg-black;
+  background-color: $bg-dark;
   user-select: none;
   overflow-x: hidden;
 }
@@ -27,7 +30,6 @@ body {
 
   &-container {
     padding: 4rem 5vw;
-    //text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -46,7 +48,9 @@ body {
 }
 
 .even-section {
-  background: black;
+  background: $bg-darken;
+  border-top: 1px solid $bg-border-color;
+  border-bottom: 1px solid $bg-border-color;
 }
 
 .highlight {
@@ -59,6 +63,20 @@ body {
   background: linear-gradient(90.71deg, rgba(62, 197, 255, 0.87) -3.75%, rgba(191, 236, 255, 0.87) 88.49%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#effects-toggle {
+  background-image: url('../assets/icons/icons-light.svg');
+  cursor: pointer;
+  opacity: 0.3;
 }
 
 .button-primary {
@@ -87,6 +105,9 @@ body {
   padding: 3rem;
 
   .brand {
+    display: flex;
+    column-gap: 0.5rem;
+
     &__title {
       font-weight: bold;
       color: $text-muted;
@@ -108,13 +129,13 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
       margin: 0;
     }
 
     &__item {
-      cursor: pointer;
       margin: 0;
 
       &::after {
@@ -146,20 +167,14 @@ body {
   &__body {
     width: 45%;
     padding: 7rem 15vw;
+    font-size: 1.65rem;
+    line-height: 2rem;
+    font-weight: 400;
 
     > p {
       color: $text-muted;
-      font-size: 1.65rem;
       margin-top: 1.87rem;
-      font-weight: 400;
-      line-height: 2rem;
     }
-  }
-}
-
-.writings-screen {
-  &__grid-block {
-    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
@@ -170,12 +185,17 @@ body {
   gap: 2rem;
   margin-top: 3rem;
   text-align: left;
+
+  &.writings-screen__grid-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .grid-element {
   background: #191819;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  border: 1px solid $bg-border-color;
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -222,7 +242,8 @@ body {
     > ul {
       display: flex;
       flex-direction: row;
-      gap: 1.1rem;
+      column-gap: 1.1rem;
+      row-gap: 0.3rem;
       flex-wrap: wrap;
       margin: 0;
     }
@@ -266,13 +287,100 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 1.2rem;
+  }
+}
 
-    &__icon {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      background-repeat: no-repeat;
-      background-size: contain;
+
+// Small devices (landscape phones, 576px and down)
+@media (max-width: 576px) {
+  div.welcome-screen__body {
+    padding: 4rem 10vw;
+    width: 80%;
+  }
+
+  .welcome-screen {
+    &__title {
+      white-space: nowrap;
+      font-size: 1.8rem;
+    }
+
+    &__body {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  .header {
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+
+    .brand {
+      &__title {
+        font-size: 1.7rem;
+      }
+    }
+
+    .menu {
+      font-size: 1.1rem;
+    }
+  }
+
+  .section {
+    &-title {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    &-container {
+      padding: 4rem 3vw;
+    }
+  }
+
+  div.grid-block, .writings-screen__grid-block {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer {
+    padding: 7rem 10vw 3.5rem 10vw;
+  }
+}
+
+// Medium devices (tablets, 768px and down)
+@media (max-width: 768px) {
+  .writings-screen {
+    &__grid-block {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+
+  .section {
+    &-title {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and down)
+@media (max-width: 992px) {
+  .grid-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Extra large devices (large desktops, 1200px and down)
+@media (max-width: 1200px) {
+  .welcome-screen {
+    &__body {
+      width: 60%;
+    }
+  }
+
+  .grid-element {
+    &__tag-box {
+      > ul {
+        column-gap: 1rem;
+      }
     }
   }
 }
