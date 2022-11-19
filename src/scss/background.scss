@@ -1,0 +1,76 @@
+a, .menu__item {
+  z-index: 2;
+}
+
+div[class^='background-container-'] {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(21rem);
+  opacity: 0.85;
+}
+
+.background-container-1 {
+  width: 27.6rem;
+  height: 27.6rem;
+  left: 40.1%;
+  top: -11.8%;
+
+  background: linear-gradient(148.85deg, #E544FF -4.93%, #633CFF 99.01%);
+}
+
+.background-container-2 {
+  width: 27.6rem;
+  height: 27.6rem;
+  //left: 910px;
+  left: 60%;
+  //top: 525px;
+  top: 73%;
+
+  background: linear-gradient(225.94deg, #D739FF 14.9%, #FFDF34 200.7%);
+}
+
+.background-container-3 {
+  width: 26.6rem;
+  height: 26.6rem;
+  //left: 926px;
+  left: 61%;
+  //top: 2290px;
+  top: 314.5%;
+
+  background: linear-gradient(235.33deg, #FF33EB 39.97%, #3461FF 116.79%);
+}
+
+.background-container-4 {
+  width: 37rem;
+  height: 37rem;
+  //left: 1240px;
+  left: 81.6%;
+  //top: 1944px;
+  top: 261%;
+
+  background: linear-gradient(220.09deg, #FFB82F -4.37%, #FB33FF 106.94%);
+}
+
+.background-container-5 {
+  width: 38.9rem;
+  height: 38.9rem;
+  //left: -209px;
+  left: -13.8%;
+  //top: 1239px;
+  top: 166%;
+
+  background: linear-gradient(141.34deg, #CB37FF 2.02%, #F9B83A 121.18%);
+  //background: red;
+}
+
+.background-container-6 {
+  width: 44.6rem;
+  height: 44.6rem;
+  //left: 1240px;
+  left: 81.6%;
+  //top: -85px;
+  top: -11%;
+
+  background: linear-gradient(211.34deg, #3D73FF 16.67%, #2E56BD 98.59%)
+}
