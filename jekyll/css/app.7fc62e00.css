@@ -5,7 +5,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font: inherit;
-  vertical-align: baseline
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -49,6 +51,10 @@ a, .menu__item, #effects-toggle {
   transition: 2s opacity
 }
 
+#background-effects.background-effects_minify .background-container-3, #background-effects.background-effects_minify .background-container-4 {
+  display: none
+}
+
 #background-effects.background-effects_active {
   -webkit-transition: 2s opacity;
   transition: 2s opacity;
@@ -67,7 +73,7 @@ a, .menu__item, #effects-toggle {
   width: 27.6rem;
   height: 27.6rem;
   left: 40.1%;
-  top: -11.8%;
+  top: -4.5%;
   background: linear-gradient(148.85deg, #E544FF -4.93%, #633CFF 99.01%)
 }
 
@@ -75,7 +81,7 @@ a, .menu__item, #effects-toggle {
   width: 27.6rem;
   height: 27.6rem;
   left: 60%;
-  top: 73%;
+  top: 18%;
   background: linear-gradient(225.94deg, #D739FF 14.9%, #FFDF34 200.7%)
 }
 
@@ -83,7 +89,7 @@ a, .menu__item, #effects-toggle {
   width: 26.6rem;
   height: 26.6rem;
   left: 61%;
-  top: 314.5%;
+  top: 80%;
   background: linear-gradient(235.33deg, #FF33EB 39.97%, #3461FF 116.79%)
 }
 
@@ -91,41 +97,37 @@ a, .menu__item, #effects-toggle {
   width: 37rem;
   height: 37rem;
   left: 81.6%;
-  top: 261%;
+  top: 67%;
   background: linear-gradient(220.09deg, #FFB82F -4.37%, #FB33FF 106.94%)
 }
 
 .background-container-5 {
   width: 38.9rem;
   height: 38.9rem;
-  left: -13.8%;
-  top: 166%;
+  left: -10%;
+  top: 45%;
   background: linear-gradient(141.34deg, #CB37FF 2.02%, #F9B83A 121.18%)
 }
 
 .background-container-6 {
   width: 44.6rem;
   height: 44.6rem;
-  left: 81.6%;
-  top: -11%;
+  left: 75%;
+  top: -5%;
   background: linear-gradient(211.34deg, #3D73FF 16.67%, #2E56BD 98.59%)
-}
-
-@media (max-width: 576px) {
-  .background-container-3 {
-    top: 334.5%
-  }
 }
 
 body {
   color: rgba(255, 255, 255, .85);
   font-family: "Inter", sans-serif;
   font-size: 1rem;
+  min-height: 100vh;
   background-color: #0f0f0f;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  position: relative;
   overflow-x: hidden
 }
 
@@ -227,6 +229,56 @@ body {
   border-color: #9ce1ff
 }
 
+.post-container {
+  width: 60%;
+  margin: 0 auto
+}
+
+.post-container__title {
+  font-size: 2.5rem
+}
+
+.post-container__status {
+  font-size: .9rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, .65);
+  margin-top: .5rem
+}
+
+.post-container__content {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: rgba(255, 255, 255, .85)
+}
+
+.post-container__content > p {
+  margin: 1rem 0;
+  word-spacing: .05rem
+}
+
+.post-container__content > h2, .post-container__content h3, .post-container__content h4 {
+  margin-top: 1.8rem;
+  margin-bottom: 1.3rem
+}
+
+.post-container__content > h2 {
+  font-size: 2rem
+}
+
+.post-container__content > h3 {
+  font-size: 1.7rem
+}
+
+.post-container__content > h4 {
+  font-size: 1.4rem
+}
+
+.post-container h1, .post-container h2, .post-container h3, .post-container h4 {
+  font-weight: bold;
+  color: rgba(255, 255, 255, .85)
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,11 +357,11 @@ body {
   background-color: rgba(255, 255, 255, .85)
 }
 
-.header .menu__item:hover {
+.header .menu__item:hover, .header .menu__item.menu__item_active {
   color: rgba(255, 255, 255, .85)
 }
 
-.header .menu__item:hover::after {
+.header .menu__item:hover::after, .header .menu__item.menu__item_active::after {
   width: 7px
 }
 
@@ -319,7 +371,7 @@ body {
 }
 
 .welcome-screen__body {
-  width: 45%;
+  width: 70%;
   padding: 7rem 15vw;
   font-size: 1.65rem;
   line-height: 2rem;
@@ -475,7 +527,7 @@ body {
 @media (max-width: 576px) {
   div.welcome-screen__body {
     padding: 4rem 10vw;
-    width: 80%
+    width: 100%
   }
 
   .welcome-screen__title {
@@ -541,7 +593,7 @@ body {
 
 @media (max-width: 1200px) {
   .welcome-screen__body {
-    width: 60%
+    width: 80%
   }
 
   .grid-element__tag-box > ul {
@@ -551,4 +603,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=app.3e1dcff1.css.map*/
+/*# sourceMappingURL=app.7fc62e00.css.map*/

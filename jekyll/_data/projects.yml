@@ -1,14 +1,62 @@
 - name: "Local Quotes"
   link: "https://github.com/decatetsu/local-quotes"
-  icon_url: "../assets/icons/obsidian.svg"
+  icon_url: "../assets/icons/projects/obsidian.svg"
   description: "Collect your quotes from all over the vault and embed them in different locations with refresh delays."
+  category: "Tools and Plugins"
   tags:
-    - TypeScript
+    - "TypeScript"
 
 - name: "unpckr"
   link: "https://github.com/decatetsu/unpckr"
-  icon_url: "../assets/icons/icon-unpckr.png"
+  icon_url: "../assets/icons/projects/unpckr.png"
   description: "cli tool that collects all files from sources into a single directory according to the specified rules."
+  category: "Tools and Plugins"
   tags:
-    - Go
+    - "Go"
 
+- name: "Webpack5 Starter"
+  link: "https://github.com/decatetsu/webpack5-starter"
+  icon_url: "../assets/icons/projects/webpack.svg"
+  description: "Why this boilerplate is better than others? I don't know, I just like it and built for personal use."
+  category: "Templates"
+  tags:
+    - "JavaScript"
+    - "Webpack"
+
+- name: "decafolio"
+  link: "https://github.com/decatetsu/decafolio"
+  icon_url: "../assets/icons/projects/jekyll.png"
+  description: "My nice-looking portfolio. You can see it itself at the moment."
+  category: "Other"
+  tags:
+    - "JavaScript"
+    - "Jekyll"
+    - "SCSS"
+
+- name: "Parcel2 Boilerplate"
+  link: "https://github.com/decatetsu/parcel2-boilerplate"
+  icon_url: "../assets/icons/projects/parcel.png"
+  description: "It`s a pretty simple boilerplate with Parcel v2 as bundler."
+  category: "Templates"
+  tags:
+    - "JavaScript"
+    - "Parcel"
+
+- name: "BrupBot"
+  link: "https://github.com/decatetsu/brupbot"
+  icon_url: "../assets/icons/projects/brain.png"
+  description: "My old school project - telegram bot that send you simple expressions and boost your brain."
+  category: "Tools and Plugins"
+  tags:
+    - "Java"
+    - "Maven"
+
+- name: "Pizza Shop"
+  link: "https://github.com/decatetsu/pizza-shop"
+  icon_url: "../assets/icons/projects/pizza.png"
+  description: "Training project to practice React and Redux via simple pizza store."
+  category: "Other"
+  tags:
+    - "JavaScript"
+    - "React"
+    - "Redux"

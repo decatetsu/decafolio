@@ -1,0 +1,43 @@
+---
+layout: "default"
+header_title: "Writings"
+permalink: "/writings/"
+---
+
+<section class="welcome-screen odd-section">
+    <div class="welcome-screen__body section-container">
+        <h1 class="welcome-screen__title">
+            <span class="inner-highlight">Hi, I'm {{ site.global.person.name }}</span> 👋</h1>
+        <p>My speciality is a <span class="highlight">Back-end developer</span>. But I also interested
+            in a Front-end and a Software Engineering.</p>
+        <p>I am not currently working on commercial projects. So I waste all my “developer” time
+            on an open-source and an education.</p>
+        <p>I like what I'm doing and <span class="highlight">really enjoying</span> it. I opened for new offers
+            and communications.</p>
+    </div>
+</section>
+
+<section class="projects-screen even-section">
+    <div class="projects-screen__body section-container">
+        <h3 class="section-title">Check out some of the stuff I've built 👇</h3>
+        <div class="grid-block">
+            {% for project in site.data.projects limit: site.global.limits.home_projects %}
+            <div class="grid-element">
+                <a class="grid-element__header" href="{{ project.link }}">
+                    <img alt="#" class="grid-element__icon" src="{{ project.icon_url }}">
+                    <span class="grid-element__title">{{ project.name }}</span>
+                    <img alt="#" class="grid-element__link-arrow" src="../assets/icons/right-arrow.svg">
+                </a>
+                <p class="grid-element__description">{{ project.description }}</p>
+                <div class="grid-element__tag-box">
+                    <ul>
+                        {% for tag in project.tags %}
+                        <li class="grid-element__tag-item">{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="button-primary" href="/projects/">See more projects</a></div>
+</section>

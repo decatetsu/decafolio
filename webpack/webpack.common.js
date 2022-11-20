@@ -24,13 +24,27 @@ module.exports = {
     },
     plugins: [
         // Cleans output folder
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: [
+                path.resolve(__dirname, '../jekyll/css/*.*'),
+                path.resolve(__dirname, '../jekyll/js/*.*'),
+                path.resolve(__dirname, '../jekyll/_layouts/default.html'),
+            ],
+        }),
         // Copying public static assets (images, fonts etc)
         new CopyWebpackPlugin({
             patterns: [
                 {
                     from: path.resolve(__dirname, '../src/assets'),
                     to: 'assets',
+                },
+                {
+                    from: path.resolve(__dirname, '../build/css'),
+                    to: path.resolve(__dirname, '../jekyll/css'),
+                },
+                {
+                    from: path.resolve(__dirname, '../build/js'),
+                    to: path.resolve(__dirname, '../jekyll/js'),
                 }
             ],
         }),
@@ -40,6 +54,10 @@ module.exports = {
         // objects)
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/default.html'),
+            filename: path.resolve(__dirname, '../jekyll/_layouts/default.html'),
         }),
     ],
     module: {

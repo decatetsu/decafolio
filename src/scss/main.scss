@@ -201,7 +201,7 @@ body {
         background-color: $text-normal;
       }
 
-      &:hover {
+      &:hover, &.menu__item_active {
         color: $text-normal;
 
         &::after {
