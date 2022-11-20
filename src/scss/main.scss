@@ -4,8 +4,10 @@ body {
   color: $text-normal;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
+  min-height: 100vh;
   background-color: $background-primary;
   user-select: none;
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -99,6 +101,55 @@ body {
   }
 }
 
+.post-container {
+  width: 60%;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__status {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: $text-muted;
+    margin-top: 0.5rem;
+  }
+
+  &__content {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $text-normal;
+
+    > p {
+      margin: 1rem 0;
+      word-spacing: 0.05rem;
+    }
+
+    > h2, h3, h4 {
+      margin-top: 1.8rem;
+      margin-bottom: 1.3rem;
+    }
+
+    > h2 {
+      font-size: 2rem;
+    }
+
+    > h3 {
+      font-size: 1.7rem;
+    }
+
+    > h4 {
+      font-size: 1.4rem;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: bold;
+    color: $text-normal;
+  }
+}
 
 .header {
   display: flex;
@@ -168,7 +219,7 @@ body {
   }
 
   &__body {
-    width: 45%;
+    width: 70%;
     padding: 7rem 15vw;
     font-size: 1.65rem;
     line-height: 2rem;
@@ -298,7 +349,7 @@ body {
 @media (max-width: 576px) {
   div.welcome-screen__body {
     padding: 4rem 10vw;
-    width: 80%;
+    width: 100%;
   }
 
   .welcome-screen {
@@ -375,7 +426,7 @@ body {
 @media (max-width: 1200px) {
   .welcome-screen {
     &__body {
-      width: 60%;
+      width: 80%;
     }
   }
 

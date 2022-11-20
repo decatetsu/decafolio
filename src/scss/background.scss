@@ -3,10 +3,15 @@ a, .menu__item, #effects-toggle {
   z-index: 2;
 }
 
-
 #background-effects {
   opacity: 0;
   transition: 2s opacity;
+
+  &.background-effects_minify {
+    .background-container-3, .background-container-4 {
+      display: none;
+    }
+  }
 
   &.background-effects_active {
     transition: 2s opacity;
@@ -21,12 +26,11 @@ a, .menu__item, #effects-toggle {
   }
 }
 
-
 .background-container-1 {
   width: 27.6rem;
   height: 27.6rem;
   left: 40.1%;
-  top: -11.8%;
+  top: -4.5%;
 
   background: linear-gradient(148.85deg, #E544FF -4.93%, #633CFF 99.01%);
 }
@@ -35,7 +39,7 @@ a, .menu__item, #effects-toggle {
   width: 27.6rem;
   height: 27.6rem;
   left: 60%;
-  top: 73%;
+  top: 18%;
 
   background: linear-gradient(225.94deg, #D739FF 14.9%, #FFDF34 200.7%);
 }
@@ -44,7 +48,7 @@ a, .menu__item, #effects-toggle {
   width: 26.6rem;
   height: 26.6rem;
   left: 61%;
-  top: 314.5%;
+  top: 80%;
 
   background: linear-gradient(235.33deg, #FF33EB 39.97%, #3461FF 116.79%);
 }
@@ -53,7 +57,7 @@ a, .menu__item, #effects-toggle {
   width: 37rem;
   height: 37rem;
   left: 81.6%;
-  top: 261%;
+  top: 67%;
 
   background: linear-gradient(220.09deg, #FFB82F -4.37%, #FB33FF 106.94%);
 }
@@ -61,8 +65,8 @@ a, .menu__item, #effects-toggle {
 .background-container-5 {
   width: 38.9rem;
   height: 38.9rem;
-  left: -13.8%;
-  top: 166%;
+  left: -10%;
+  top: 45%;
 
   background: linear-gradient(141.34deg, #CB37FF 2.02%, #F9B83A 121.18%);
 }
@@ -70,15 +74,8 @@ a, .menu__item, #effects-toggle {
 .background-container-6 {
   width: 44.6rem;
   height: 44.6rem;
-  left: 81.6%;
-  top: -11%;
+  left: 75%;
+  top: -5%;
 
   background: linear-gradient(211.34deg, #3D73FF 16.67%, #2E56BD 98.59%)
-}
-
-
-@media (max-width: 576px) {
-  .background-container-3 {
-    top: 334.5%;
-  }
 }
