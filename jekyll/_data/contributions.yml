@@ -1,0 +1,27 @@
+- name: "Obsidian Releases"
+  link: "https://github.com/obsidianmd/obsidian-releases"
+  icon_url: "../assets/icons/entities/obsidian.svg"
+  description: "Contributed my own plugin - Local Quotes, to the community plugins store."
+  tags:
+    - "Plugin"
+
+- name: "Obsidian Translations"
+  link: "https://github.com/obsidianmd/obsidian-translations"
+  icon_url: "../assets/icons/entities/obsidian.svg"
+  description: "Contributed Ukrainian translation, fixed typos from previous contributors and provided termbase."
+  tags:
+    - "Translation"
+
+- name: "Minimal Theme"
+  link: "https://github.com/kepano/obsidian-minimal"
+  icon_url: "../assets/icons/entities/obsidian.svg"
+  description: "Contributed Ukrainian translation for labels."
+  tags:
+    - "Translation"
+
+- name: "Quartz"
+  link: "https://github.com/jackyzha0/quartz"
+  icon_url: "../assets/icons/entities/obsidian.svg"
+  description: "Contributed Ukrainian translation for digital garden Obsidian plugin."
+  tags:
+    - "Translation"

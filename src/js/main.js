@@ -3,7 +3,11 @@ const effectBtn = document.getElementById('effects-toggle');
 const bgHtmlWrapper = document.getElementById('background-effects');
 
 if (window.localStorage.getItem('bgEffects') === null) {
-    window.localStorage.setItem('bgEffects', 'false');
+    // Turn off effects by default for mobile
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        window.localStorage.setItem('bgEffects', 'false');
+    }
+    window.localStorage.setItem('bgEffects', 'true');
 }
 
 if (window.localStorage.getItem('bgEffects') === 'true') {

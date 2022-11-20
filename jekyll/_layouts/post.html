@@ -1,0 +1,18 @@
+---
+layout: "default"
+---
+
+{% capture read_time %}
+    {{ page.content | number_of_words | divided_by: 180 | plus: 1 }}
+{% endcapture %}
+
+<section class="post-container">
+    <div class="post-container__title">{{ page.title }}</div>
+    <div class="post-container__status">
+        {{ page.date | date: "%Y-%m-%d %H:%M" }} - {{ read_time }} min read
+    </div>
+
+    <div class="post-container__content">
+        {{ content }}
+    </div>
+</section>

@@ -1,0 +1,39 @@
+---
+layout: "default"
+permalink: "/contributions/"
+---
+
+{% capture ws-title %}
+<span class="inner-highlight">My contributions</span>
+{% endcapture %}
+
+{% capture ws-content %}
+<p>I like open-source software because I can affect and improve it.</p>
+<p>Usually my contributions are small bug fixing and translation into my native (Ukrainian) language.</p>
+{% endcapture %}
+
+{% include welcome-screen.html title=ws-title content=ws-content %}
+
+<section class="contributions-screen even-section">
+    <div class="contributions-screen__body section-container">
+        <div class="grid-block">
+            {% for contrib in site.data.contributions %}
+            <div class="grid-element">
+                <a class="grid-element__header" href="{{ contrib.link }}" target="_blank">
+                    <img alt="#" class="grid-element__icon" src="{{ contrib.icon_url }}">
+                    <span class="grid-element__title">{{ contrib.name }}</span>
+                    <img alt="#" class="grid-element__link-arrow" src="../assets/icons/right-arrow.svg">
+                </a>
+                <p class="grid-element__description">{{ contrib.description }}</p>
+                <div class="grid-element__tag-box">
+                    <ul>
+                        {% for tag in contrib.tags %}
+                        <li class="grid-element__tag-item">{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

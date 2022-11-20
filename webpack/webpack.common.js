@@ -26,8 +26,9 @@ module.exports = {
         // Cleans output folder
         new CleanWebpackPlugin({
             cleanAfterEveryBuildPatterns: [
-                path.resolve(__dirname, '../jekyll/css/*.*'),
-                path.resolve(__dirname, '../jekyll/js/*.*'),
+                path.resolve(__dirname, '../jekyll/css/*'),
+                path.resolve(__dirname, '../jekyll/js/*'),
+                path.resolve(__dirname, '../jekyll/assets/*'),
                 path.resolve(__dirname, '../jekyll/_layouts/default.html'),
             ],
         }),
@@ -36,16 +37,8 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, '../src/assets'),
-                    to: 'assets',
+                    to: path.resolve(__dirname, '../build/assets'),
                 },
-                {
-                    from: path.resolve(__dirname, '../build/css'),
-                    to: path.resolve(__dirname, '../jekyll/css'),
-                },
-                {
-                    from: path.resolve(__dirname, '../build/js'),
-                    to: path.resolve(__dirname, '../jekyll/js'),
-                }
             ],
         }),
         // Use html as template to automatically insert
@@ -56,8 +49,9 @@ module.exports = {
             template: path.resolve(__dirname, '../src/index.html'),
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/default.html'),
-            filename: path.resolve(__dirname, '../jekyll/_layouts/default.html'),
+            inject: true,
+            template: path.resolve(__dirname, '../src/pages/default.html'),
+            filename: path.resolve(__dirname, '../build/pages/default.html'),
         }),
     ],
     module: {

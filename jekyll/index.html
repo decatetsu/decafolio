@@ -24,7 +24,7 @@ layout: "default"
         <div class="grid-block">
             {% for project in site.data.projects limit: site.global.limits.home_projects %}
             <div class="grid-element">
-                <a class="grid-element__header" href="{{ project.link }}">
+                <a class="grid-element__header" href="{{ project.link }}" target="_blank">
                     <img alt="#" class="grid-element__icon" src="{{ project.icon_url }}">
                     <span class="grid-element__title">{{ project.name }}</span>
                     <img alt="#" class="grid-element__link-arrow" src="assets/icons/right-arrow.svg">
@@ -45,124 +45,45 @@ layout: "default"
 <section class="writings-screen odd-section">
     <div class="writings-screen__body section-container"><h3 class="section-title">Recommended reading 📖</h3>
         <div class="grid-block writings-screen__grid-block">
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
+            {% for post in site.posts limit: site.global.limits.home_writings %}
+            <div class="grid-element">
+                <a class="grid-element__header" href="{{ post.url }}" target="_blank">
+                    <span class="grid-element__title">{{ post.title }}</span>
+                    <img alt="#" class="grid-element__link-arrow" src="assets/icons/right-arrow.svg"></a>
+                <p class="grid-element__description">{{ post.description }}</p>
                 <div class="grid-element__tag-box">
                     <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
+                        {% for tag in post.tags %}
+                        <li class="grid-element__tag-item">{{ tag }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
-                <div class="grid-element__tag-box">
-                    <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
-                <div class="grid-element__tag-box">
-                    <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
-                    </ul>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        <a class="button-primary" href="#">See more articles</a></div>
+        <a class="button-primary" href="/writings/">See more articles</a>
+    </div>
 </section>
 <section class="contributions-screen even-section">
     <div class="contributions-screen__body section-container"><h3 class="section-title">My contributions 👀</h3>
         <div class="grid-block">
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
+            {% for contrib in site.data.contributions %}
+            <div class="grid-element">
+                <a class="grid-element__header" href="{{ contrib.link }}" target="_blank">
+                    <img alt="#" class="grid-element__icon" src="{{ contrib.icon_url }}">
+                    <span class="grid-element__title">{{ contrib.name }}</span>
+                    <img alt="#" class="grid-element__link-arrow" src="../assets/icons/right-arrow.svg">
+                </a>
+                <p class="grid-element__description">{{ contrib.description }}</p>
                 <div class="grid-element__tag-box">
                     <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
+                        {% for tag in contrib.tags %}
+                        <li class="grid-element__tag-item">{{ tag }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
-                <div class="grid-element__tag-box">
-                    <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
-                <div class="grid-element__tag-box">
-                    <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid-element"><a class="grid-element__header" href="#"><img alt="#"
-                                                                                    class="grid-element__icon"
-                                                                                    src="assets/icons/mongodb.svg">
-                <span class="grid-element__title">JSON API</span> <img alt="#" class="grid-element__link-arrow"
-                                                                       src="assets/icons/right-arrow.svg"></a>
-                <p class="grid-element__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas quis ante ac lacus malesuada lacinia. Donec sagittis sollicitudin justo, ac semper sem
-                    tempor a. Aliquam a blandit dui, vel feugiat nisl.</p>
-                <div class="grid-element__tag-box">
-                    <ul>
-                        <li class="grid-element__tag-item">Python</li>
-                        <li class="grid-element__tag-item">API</li>
-                        <li class="grid-element__tag-item">C/C++</li>
-                    </ul>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        <a class="button-primary" href="#">See more articles</a></div>
+        <a class="button-primary" href="/contributions/">See more contributions</a></div>
 </section>

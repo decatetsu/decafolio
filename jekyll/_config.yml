@@ -1,10 +1,30 @@
-include:
-  - '_pages'
-
 global:
   title: "Andrii Yefremov"
+  charsPerMinute: 180
   limits:
     home_projects: 4
+    home_writings: 3
   person:
     name: "Andrii"
     full_name: "Andrii Yefremov"
+
+include:
+  - "_pages"
+
+social_links:
+  - Gmail:
+    link: "mailto:decatetsu@gmail.com"
+    icon_url: "../assets/icons/social/gmail.svg"
+    title: "Contact Mail"
+  - Blog:
+    link: "/writings/"
+    icon_url: "../assets/icons/social/blog.svg"
+    title: "Blog"
+  - GitHub:
+    link: "https://github.com/decatetsu"
+    icon_url: "../assets/icons/social/github.svg"
+    title: "GitHub"
+  - LinkedIn:
+    link: "https://www.linkedin.com/in/andrii-yefremov-a16276232/"
+    icon_url: "../assets/icons/social/linkedin.svg"
+    title: "LinkedIn"

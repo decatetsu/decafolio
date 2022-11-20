@@ -19,6 +19,7 @@ body {
     font-size: 1.87rem;
     line-height: 2.15rem;
     color: $text-white;
+    margin-bottom: 3rem;
   }
 
   &-container {
@@ -32,19 +33,6 @@ body {
   background: $background-secondary;
   border-top: 1px solid $background-modifier;
   border-bottom: 1px solid $background-modifier;
-}
-
-// Declare icons' background
-.icon-gmail {
-  background-image: url('../assets/icons/icon-gmail.svg');
-}
-
-.icon-blog {
-  background-image: url('../assets/icons/icon-blog.svg');
-}
-
-.icon-github {
-  background-image: url('../assets/icons/icon-github.svg');
 }
 
 .highlight {
@@ -65,6 +53,12 @@ body {
   height: 1.5rem;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: 1s opacity;
+  opacity: 0.55;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .prevent-load-transition {
@@ -237,7 +231,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   justify-items: stretch;
   gap: 2rem;
-  margin-top: 3rem;
+  //margin-top: 3rem;
   text-align: left;
 
   &.writings-screen__grid-block {
@@ -266,12 +260,12 @@ body {
 
   &__icon {
     height: 1.2rem;
+    margin-right: 0.3rem;
   }
 
   &__title {
     font-size: 1.1rem;
     font-weight: bold;
-    margin-left: 0.3rem;
   }
 
   &__link-arrow {
@@ -321,8 +315,12 @@ body {
   padding: 7rem 25vw 3.5rem 25vw;
   color: $text-faint;
 
-  strong {
+  strong a {
     color: $text-normal;
+
+    &:hover {
+      text-decoration: underline 1px solid $text-normal;
+    }
   }
 
   > p {
