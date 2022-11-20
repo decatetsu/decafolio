@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>{{ site.global.title }}</title>
+    <script defer="defer" src="../js/app.3e1dcff1.js"></script>
+    <link href="../css/app.3e1dcff1.css" rel="stylesheet">
+</head>
+<body>
+<div id="background-effects" class="prevent-load-transition">
+    <div class="background-container-1"></div>
+    <div class="background-container-2"></div>
+    <div class="background-container-3"></div>
+    <div class="background-container-4"></div>
+    <div class="background-container-5"></div>
+    <div class="background-container-6"></div>
+</div>
+<header class="header">
+    <div class="brand"><a class="brand__title" href="#">{{ site.global.person.full_name }}</a>
+        <div id="effects-toggle" class="icon prevent-load-transition" title="Make some magic"></div>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="menu__item"><a href="#">Writings</a></li>
+            <li class="menu__item"><a href="#">Projects</a></li>
+            <li class="menu__item"><a href="#">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="main">
+    {{ content }}
+</main>
+<footer class="footer">
+    <p>Do you have some question or want to get more information about be? Check out the sites below.</p>
+    <div class="social">
+        <a class="icon icon-gmail" href="#"></a>
+        <a class="icon icon-blog" href="#"></a>
+        <a class="icon icon-github" href="#"></a>
+    </div>
+    <p class="copyright">© Copyright 2022 <strong>{{ site.global.person.full_name }}</strong></p></footer>
+</body>
+</html>

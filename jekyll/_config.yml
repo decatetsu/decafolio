@@ -1,0 +1,10 @@
+include:
+  - '_pages'
+
+global:
+  title: "Andrii Yefremov"
+  limits:
+    home_projects: 4
+  person:
+    name: "Andrii"
+    full_name: "Andrii Yefremov"

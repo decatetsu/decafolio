@@ -1,0 +1,14 @@
+- name: "Local Quotes"
+  link: "https://github.com/decatetsu/local-quotes"
+  icon_url: "../assets/icons/obsidian.svg"
+  description: "Collect your quotes from all over the vault and embed them in different locations with refresh delays."
+  tags:
+    - TypeScript
+
+- name: "unpckr"
+  link: "https://github.com/decatetsu/unpckr"
+  icon_url: "../assets/icons/icon-unpckr.png"
+  description: "cli tool that collects all files from sources into a single directory according to the specified rules."
+  tags:
+    - Go
+
