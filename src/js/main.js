@@ -1,7 +1,9 @@
 // Prevent transition loading from page load
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.prevent-load-transition').classList.remove('prevent-load-transition');
-});
+window.onload = () => {
+    document.querySelectorAll('.prevent-load-transition').forEach(e => {
+        e.classList.remove('prevent-load-transition')
+    });
+}
 
 // Declaring necessary DOM objects
 const effectBtn = document.getElementById('effects-toggle');
